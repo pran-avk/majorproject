@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/signuporlogin/signup.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -138,7 +139,9 @@ class _LoginPageState extends State<LoginPage> {
                       onPressed: () {
                         // Navigate to signup
                       },
-                      child: TextButton(onPressed: (){}, child: Text("SignUp",style: TextStyle(fontSize: 18),))
+                      child: TextButton(onPressed: (){
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>SignupPage()));
+                      }, child: Text("SignUp",style: TextStyle(fontSize: 18),))
                     ),
                   ],
                 ),
